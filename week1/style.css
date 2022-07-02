@@ -1,0 +1,36 @@
+.container {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 10px;
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 5px;
+    border:3px solid black;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 5%;
+}
+
+.left-box{
+    background-color: aqua;
+    border: 3px solid black;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.right-box{
+    background-color: aqua;
+    border: 3px solid black;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.footer{
+    clear: both;
+    float:none;
+}
