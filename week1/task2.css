@@ -1,0 +1,58 @@
+.content{
+    
+    width: 300px;
+    margin:auto;
+}
+.form{
+    
+    padding-left: 10px;
+}
+.first-name{
+    width: 48%;
+    float:left;
+}
+.last-name{
+    
+    width: 48%;
+    float:right;
+}
+.footer{
+    clear: both;
+    float: none;
+}
+.text{
+    outline: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border-color:gray;
+}
+.text-name{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border-color: gray;
+}
+.text-message{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border-color: gray;
+    height: 100px;
+}
+.submit{
+    margin-top: 15px;
+}
+.btn{
+    width: 100px;
+    height:30px;
+    border-radius: 3px;
+    border: 0px;
+    background-color: orange;
+    color: white;
+    float: right;
+}
+.subscribe{
+    font-size: 12px;
+    font-weight: 500;
+}
