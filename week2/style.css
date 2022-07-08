@@ -2,73 +2,114 @@ h1, h2, h3, h4, p{
     font-family: 'Inconsolata', monospace;
 }
 h2{
-    font-size: 30px;
+    font-size: 2.5rem;
 }
 h3{
-    font-size: 25px;
+    font-size: 2rem;
 }
 h4{
-    font-size: 20px;
+    font-size: 1.5rem;
+}
+img{
+    width:3.5rem;
+    height:3.5rem;
+    object-fit: cover;
 }
 
 .container{
     display:flex;
     justify-content: center;
-    border: 1px black solid;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
 }
-.left-item{
+.leftItem{
     display:flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex-grow:1;
-    border: 1px black solid;
+    white-space: nowrap;
+    margin-top: 5rem;
+    margin-right: 0.5rem;
+    padding-right: 1rem;
+    /* border-right: 0.2rem solid black ; */
+    box-shadow: 0.1rem 0.1rem 0.2rem rgb(163, 163, 184);
 }
-.right-item{
+.centerItem{
     display:flex;
-    flex-grow:5;
+    flex-grow:7;
     flex-direction: column;
     align-items: center;
-    border: 1px black solid;
-}
-.profile-title{
+    margin-top: 5rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgb(163, 163, 184);
 
 }
-.profile-image{
-
+.profileTitle{
+    margin-top: 5rem;
+    /* box-shadow: 0.1rem 0.1rem 0.2rem gray; */
 }
-.tool-images{
+.profileImage{
+    /* box-shadow: 0.1rem 0.1rem 0.2rem gray; */
+}
+
+.toolImages{
     display: flex;
-    width:300px;
+    justify-content: space-between;
+    width:50vw;
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    border: 1px black solid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 7rem;
+    /* box-shadow: 0.1rem 0.1rem 0.2rem gray; */
 }
-img{
-    width:150px;
-    height:fit-content;
-    border-radius: 20%;
+.logos{
+    width:5rem;
+    height:5rem;
+    object-fit: cover;
+    
 }
-.profile-text{
+.profileImage{
+    width:12rem;
+    height:12rem;
+    object-fit: cover;
+    border-radius: 12%;
+}
+.profileText{
+    text-align: center;
+    white-space: normal;
+    /* box-shadow: 0.1rem 0.1rem 0.2rem gray; */
+}
+.profileTextContent{
+    /* box-shadow: 0.1rem 0.1rem 0.1rem gray; */
+}
 
+
+.rightItem{
+    
 }
 
 @media screen and (max-width : 768px){
     p{
-        font-size:12px;
+        font-size: 0.8rem;
     }
     h2{
-        font-size:20px;
+        font-size:2.5rem;
     }
     h3{
-        font-size:15px;
+        font-size:1.4rem;
     }
     h4{
-        font-size:15px;
+        font-size:1.5rem;
     }
-    img{
-        width:100px;
+    .profileImage{
+        width: 10rem;
+        height: 10rem;
+    }
+    .logos{
+        width: 5rem;
+        height: 5rem; 
     }
 }
 
