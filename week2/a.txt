@@ -1,0 +1,9 @@
+flex는 자주 씀
+container/item으로 나뉘고 서로 적용되는 css가 다르다
+inline-flex 거의 안 씀
+
+flex-flow
+justify-content 좌우
+align-items 상하
+
+

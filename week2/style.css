@@ -1,0 +1,73 @@
+h1, h2, h3, h4, p{
+    font-family: 'Inconsolata', monospace;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    font-size: 20px;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    border: 1px black solid;
+}
+.left-item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow:1;
+    border: 1px black solid;
+}
+.right-item{
+    display:flex;
+    flex-grow:5;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+}
+.profile-title{
+
+}
+.profile-image{
+
+}
+.tool-images{
+    display: flex;
+    width:300px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 1px black solid;
+}
+img{
+    width:150px;
+    height:fit-content;
+    border-radius: 20%;
+}
+.profile-text{
+
+}
+
+@media screen and (max-width : 768px){
+    p{
+        font-size:12px;
+    }
+    h2{
+        font-size:20px;
+    }
+    h3{
+        font-size:15px;
+    }
+    h4{
+        font-size:15px;
+    }
+    img{
+        width:100px;
+    }
+}
