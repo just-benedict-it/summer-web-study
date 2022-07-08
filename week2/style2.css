@@ -1,15 +1,8 @@
-h1, h2, h3, h4, p{
-    font-family: 'Inconsolata', monospace;
-}
-h2{
-    font-size: 2.5rem;
-}
-h3{
-    font-size: 2rem;
-}
-h4{
-    font-size: 1.5rem;
-}
+h1, h2, h3, h4, p{font-family: 'Inconsolata', monospace;}
+h1{font-size: 3rem;}
+h2{font-size: 2.5rem;}
+h3{font-size: 2rem;}
+h4{font-size: 1.5rem;}
 img{
     width:3.5rem;
     height:3.5rem;
@@ -22,21 +15,12 @@ img{
     margin-left: 3rem;
     margin-right: 3rem;
     margin-top: 5rem;
+}
 
-}
-.leftItem{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow:1;
-    white-space: nowrap;
-    margin-right: 0.5rem;
-    padding-right: 1rem;
-    box-shadow: 0.1rem 0.1rem 0.2rem rgb(163, 163, 184);
-}
+
 .centerItem{
     display:flex;
-    flex-grow:7;
+    flex-grow:1;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -60,25 +44,40 @@ img{
 }
 .profileTextContent{
 }
+
+
 .rightItem{
-    flex-grow: 1;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    flex-grow: 5;
+    text-align: center;
     box-shadow: 0.1rem 0.1rem 0.2rem rgb(163, 163, 184);
 }
-.toolImages{
+.title{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.menuAll{
+    margin-bottom: 5rem;
+}
+.menu {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     flex-wrap: nowrap;
-
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 7rem;
+    margin-top: 3rem;
+}
+.food{
+    width: 15em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    /* border: 2px solid gray; */
+
 }
 .logos{
     width:5rem;
     height:5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     object-fit: cover;
 }
 
