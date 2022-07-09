@@ -6,21 +6,14 @@
     float: left;
     width:550px;
     padding:1%;
-    border: 1px solid black;
 }
 .right-content{
     float:right;
     width:200px;
     padding: 1.5%;
-    border: 1px solid black;
-}
-
-.profile{
-    border: 1px solid black;
 }
 .reviews{
     margin-top: 30px;
-    border: 1px solid black;
 }
 .image-profile{
     width: 50px;
