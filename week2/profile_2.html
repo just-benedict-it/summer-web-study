@@ -4,8 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://mblogthumb-phinf.pstatic.net/MjAxNzAxMjBfMjMg/MDAxNDg0OTExNzMzNjkw.HjvbKUnnNzE2t5Hccp3d4rYrkk4UcKuK5XRG3XTq6Ygg.HJXAXu6qaLGusEHd8kOrVnMap3-rpqqO0txOiWuINmcg.PNG.kyojjong/%EC%B8%84%ED%8C%8C%EC%B8%95%EC%8A%A4-%EB%A1%9C%EA%B3%A0ai.png?type=w800" type="image/x-icon">
     <link rel="stylesheet" href="style2.css">
     <title>San</title>
 </head>
@@ -32,19 +34,19 @@
         </div>
         <div class="rightItem">
             <div class="title">
-                <h1>MENU</h1>
+                <h1>+MENU+</h1>
             </div>
             <div class="menuAll">
                 <div class="menu">
                     <div class="food">
                         <img class="logos" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ79ERhYNIVheO-rjZGjL46_-By2IxvR9PdQ&usqp=CAU">
-                        <p>PYTHON</p>
+                        <p class="logoName">PYTHON 36,000</p>
                         <p>Best selling in our store!!</p>
                         <p>Anyone can eat easily</p>
                     </div>
                     <div class="food">
                         <img class="logos" src="https://images.velog.io/images/judylia/post/07480b21-2250-49f0-83f7-8ae6994249f8/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.png">
-                        <p>JAVASCRIPT</p>
+                        <p class="logoName">JAVASCRIPT 38,000</p>
                         <p>Best selling in our store!!</p>
                         <p>Anyone can eat easily</p>
                     </div>
@@ -52,13 +54,13 @@
                 <div class="menu">
                     <div class="food">
                         <img class="logos" src="https://play-lh.googleusercontent.com/NX2yIzhb1SyMKmn0N0CFyLqY_U9U-uhD06ITeJSg67IKMCHZ50SgylgrqhHdGn1Zabs">
-                        <p>GOLANG</p>
+                        <p class="logoName">GOLANG 12,000</p>
                         <p>Our new food!! </p>
                         <p>You can eat quickly!</p>
                     </div>
                     <div class="food">
                         <img class="logos" src="data:image/png;base64,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">
-                        <p>C++</p>
+                        <p class="logoName">C++ 52,000</p>
                         <p>Little Spicy!</p>
                         <p>Be careful</p>
                     </div>
@@ -66,12 +68,12 @@
                 <div class="menu">
                     <div class="food">
                         <img class="logos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/800px-Matlab_Logo.png">
-                        <p>MATLAB</p>
+                        <p class="logoName">MATLAB 18,000</p>
                         <p>If you love PYTHON,<br> you will like this one too!</p>
                     </div>
                     <div class="food">
                         <img class="logos" src="https://efswrm9jggu.exactdn.com/wp-content/uploads/2022/03/NX-Logo.svg">
-                        <p>NX</p>
+                        <p class="logoName">NX 11,000</p>
                         <p>Actually this is foreign food!</p>
                         <p>Only for adventurers~</p>
                     </div>

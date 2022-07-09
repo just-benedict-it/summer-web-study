@@ -1,4 +1,6 @@
-h1, h2, h3, h4, p{font-family: 'Inconsolata', monospace;}
+h1, h2, h3, h4, p{
+    font-family: 'Chakra Petch', sans-serif;
+}
 h1{font-size: 3rem;}
 h2{font-size: 2.5rem;}
 h3{font-size: 2rem;}
@@ -70,8 +72,6 @@ img{
     width: 15em;
     margin-right: 1rem;
     margin-left: 1rem;
-    /* border: 2px solid gray; */
-
 }
 .logos{
     width:5rem;
@@ -79,6 +79,10 @@ img{
     margin-left: 3rem;
     margin-right: 3rem;
     object-fit: cover;
+}
+.logoName{
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 @media screen and (max-width : 768px){
