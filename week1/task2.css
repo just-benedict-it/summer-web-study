@@ -48,6 +48,7 @@
     background-color: orange;
     color: white;
     float: right;
+    cursor: pointer;
 }
 .subscribe{
     font-size: 12px;
