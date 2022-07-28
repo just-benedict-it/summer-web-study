@@ -1,16 +1,22 @@
 const words = ['application', 'programming', 'interface', 'wizard'];
-let selectedWord = words[Math.floor(Math.random()*words.length)];
-const correctLetters = [];
+export let selectedWord = words[Math.floor(Math.random()*words.length)];
+export const correctLetters = [];
 const wrongLetters = [];
-wrongBox = document.querySelector(".wrongBox");
-rightBox = document.querySelector(".rightBox");
-wrongBoxLetters = document.querySelector(".wrongBoxLetters");
-rightBoxLetters = document.querySelector(".rightBoxLetters");
+const wrongBox = document.querySelector(".wrongBox");
+const rightBox = document.querySelector(".rightBox");
+const wrongBoxLetters = document.querySelector(".wrongBoxLetters");
+import { wrongModal, checkLife, checkCorrect } from "./modal.js";
+const ul = document.querySelector("ul");
+export var life = 5;
 
-let life = 5;
-let blankedArray = Array(selectedWord.length).fill(" _ ");
 let selectedWordArray = selectedWord.split("");
-rightBoxLetters.innerText = blankedArray;
+
+
+for (var i=0; i<selectedWord.length; i++) {
+    const li = document.createElement("li");
+    li.append("-");
+    ul.appendChild(li);
+}
 
 function wordWritten(word){
     if (selectedWord.includes(word.key)){
@@ -18,8 +24,7 @@ function wordWritten(word){
             repeatedWord();
         }
         else{
-            selectedWordArray.map((letter,index)=>{if(letter==word.key){blankedArray[index]=word.key;correctLetters.push(word.key);}});
-            rightBoxLetters.innerText = blankedArray;
+            selectedWordArray.map((letter,index)=>{if(letter==word.key){ul.querySelectorAll("li")[index].innerHTML=word.key;correctLetters.push(word.key);}});
             checkCorrect();
         }
     }else{
@@ -28,33 +33,16 @@ function wordWritten(word){
         }
         else{
             const hiddenBody = document.querySelector(".hidden");
-            if (hiddenBody){
-                hiddenBody.classList.remove("hidden");
-                wrongLetters.push(word.key);
-                wrongBoxLetters.innerText = wrongLetters;
-                life--;
-                checkLife(life);
-            }
+            hiddenBody.classList.remove("hidden");
+            wrongLetters.push(word.key);
+            wrongBoxLetters.innerText = wrongLetters;
+            life--;
+            checkLife(life);
         }
     }
 }
 function repeatedWord(){
     alert("you tried this word already");
-}
-
-function checkLife(life){
-    if (life==0){
-        console.log("dead");
-        alert("dead");
-        window.location.reload();
-    }
-}
-function checkCorrect(){
-    if (selectedWord.length==correctLetters.length){
-        alert("correct");
-        window.location.reload();
-
-    }
 }
 
 window.addEventListener('keydown', wordWritten);

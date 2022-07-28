@@ -22,15 +22,40 @@
     </svg>
     <div class="textBox">
         <div class="wrongBox">
-            <p>wrong words</p>
-            <p class="wrongBoxLetters"></p>
+            <p>wrong words : <span class="wrongBoxLetters"></span></p>
         </div>
         <div class="rightBox">
-            <p>right words</p>
-            <p class="rightBoxLetters"></p>
+            <ul class="ul">
+            </ul>
+        </div>
+    </div>
+    <div class="wrongModal">
+        <div class="wrongModalWindow">
+            <div class="wrongModalHeader">
+                <p>X</p>
+            </div>
+            <div class="wrongModalBody">
+                <p>Hangman Dead!!</p>
+                <p>Answer : <span class="wrongModalBodyAnswer"></span></p> 
+            </div>
+            <div><p></p></div>
+        </div>
+    </div>
+    <div class="rightModal">
+        <div class="rightModalWindow">
+            <div class="rightModalHeader">
+                <p>X</p>
+            </div>
+            <div class="rightModalBody">
+                <div><p>Hangman Survived!</p></div>
+            </div>
+            <div class="rightModalBtn">
+                <button>Try Again!</button> 
+            </div>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/modal.js"></script>
 </body>
 </html>
