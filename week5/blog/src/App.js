@@ -3,8 +3,11 @@ import './App.css';
 import {FaHamburger} from 'react-icons/fa';
 import {useState} from "react";
 
+
+
 function App() {
-  const [title, titleChange] = useState(["KIM OLIVIA", "SEO SAN", "SOP"]);
+  const [title, titleChange] = useState(["SEO SAN", "SOP", "KIM OLIVIA"]);
+  title.sort();
   return (
     <>
       <div className="header">
@@ -25,27 +28,33 @@ function App() {
             </a>
           </div>
         </div>
-        {/* <FaHamburger></FaHamburger> */}
       </div>
       <div className="container">
         <div className="containerBox">
-          <div>
+          <div className='containerBoxHeader'>
             <div><h3>{title[0]}</h3></div>
-            {/* <div><button onClick={()=>titleChange("OLIVIA KIM", "OLIVIA KIM", "OLIVIA KIM")[0]}>change</button></div> */}
+            <div><button onClick={()=> {let copyTitle = [...title]; copyTitle[0]="OLIVIA KIM"; titleChange(copyTitle)}}>change</button></div>
           </div>
           <div>7월 29일 제작</div>
         </div>
         <div className="containerBox">
-          <div><h3>{title[1]}</h3></div>
+          <div className='containerBoxHeader'>
+            <div><h3>{title[1]}</h3></div>
+            <div><button onClick={()=> {let copyTitle = [...title]; copyTitle[1]="SAN SEO"; titleChange(copyTitle)}}>change</button></div>
+          </div>
           <div>7월 29일 제작</div>
         </div>
         <div className="containerBox">
+          <div className='containerBoxHeader'>
             <div><h3>{title[2]}</h3></div>
-            <div>7월 29일 제작</div>
-        </div>
+            <div><button onClick={()=> {let copyTitle = [...title]; copyTitle[2]="POS"; titleChange(copyTitle)}}>change</button></div>
+          </div>
+          <div>7월 29일 제작</div>
+        </div>  
       </div>
     </>
   );
+  
 
 }
 
