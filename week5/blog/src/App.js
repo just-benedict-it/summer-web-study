@@ -1,10 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
-import {FaHamburger} from 'react-icons/fa';
-import {useState} from "react";
+import "./App.css";
+import { createElement, useState } from "react";
+
+function Modal({ title, onClick }) {
+  const [content, setContent] = useState("");
+  const [contents, setContents] = useState([]);
+
+  const onChange = (e) => {
+    setContent(e.target.value);
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!content) {
+      return;
+    }
+    setContents((curr) => [...curr, content]);
+    setContent("");
+  };
+  const onXClick = (e) => {
+    const li = e.nativeEvent.path[1];
+    li.remove();
+  };
+  return (
+    <div className="containerBox">
+      <div>
+        <div>
+          <h3>{title}</h3>
+        </div>
+        <button onClick={onClick}>change</button>
+      </div>
+      <div>7월 29일 제작</div>
+      <div className="contentBox"></div>
+      <form type="submit" onSubmit={onSubmit}>
+        <input onChange={onChange} value={content}></input>
+        <button>submit</button>
+      </form>
+      {contents.map((item, index) => (
+        <li key={index}>
+          {item}
+          <button onClick={onXClick}> X</button>
+        </li>
+      ))}
+    </div>
+  );
+}
 
 function App() {
-  const [title, titleChange] = useState(["KIM OLIVIA", "SEO SAN", "SOP"]);
+  const [title, setTitle] = useState(["남자 코트", "남자 모자", "남자 가방"]);
+
   return (
     <>
       <div className="header">
@@ -25,28 +67,33 @@ function App() {
             </a>
           </div>
         </div>
-        {/* <FaHamburger></FaHamburger> */}
       </div>
       <div className="container">
-        <div className="containerBox">
-          <div>
-            <div><h3>{title[0]}</h3></div>
-            {/* <div><button onClick={()=>titleChange("OLIVIA KIM", "OLIVIA KIM", "OLIVIA KIM")[0]}>change</button></div> */}
-          </div>
-          <div>7월 29일 제작</div>
-        </div>
-        <div className="containerBox">
-          <div><h3>{title[1]}</h3></div>
-          <div>7월 29일 제작</div>
-        </div>
-        <div className="containerBox">
-            <div><h3>{title[2]}</h3></div>
-            <div>7월 29일 제작</div>
-        </div>
+        {
+          <>
+            <Modal
+              title={title[0]}
+              onClick={() => {
+                setTitle(["여자 코트", title[1], title[2]]);
+              }}
+            />
+            <Modal
+              title={title[1]}
+              onClick={() => {
+                setTitle([title[0], "여자 모자", title[2]]);
+              }}
+            />
+            <Modal
+              title={title[2]}
+              onClick={() => {
+                setTitle([title[0], title[1], "여자 가방"]);
+              }}
+            />
+          </>
+        }
       </div>
     </>
   );
-
 }
 
 export default App;
